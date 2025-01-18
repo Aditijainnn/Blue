@@ -1,0 +1,167 @@
+.pss {
+    padding: 30px 20px;
+    border-radius: var(--radius-3);
+    background: var(--color-background-secondary);
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .pss h1 {
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .question-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .question__text {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-text);
+    line-height: 21px;
+  }
+  
+  .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .option__button {
+    padding: 5px 10px;
+    background: var(--color-background-primary);
+    border: none;
+    border-radius: var(--radius-3);
+    cursor: pointer;
+    font-size: 12px;
+    color: var(--color-muted);
+    flex-grow: 1;
+    transition: all 0.3s ease;
+  }
+  
+  .option__button:hover {
+    background: var(--color-background-primary);
+    color: var(--color-primary);
+  }
+  
+  .option__button.selected {
+    background: var(--color-primary);
+    color: var(--color-background-primary);
+  }
+  
+  .submit__button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--color-primary);
+    color: var(--color-background-primary);
+    border: none;
+    border-radius: var(--radius-3);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    max-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 0.3s ease;
+  }
+  
+  .submit__button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .score__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 15px;
+  }
+  
+  .score__display {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--color-primary);
+  }
+  
+  .speedometer {
+    position: relative;
+    width: 150px;
+    height: 75px;
+    background: var(--color-background-primary);
+    border-radius: 75px 75px 0 0;
+    overflow: hidden;
+  }
+  
+  .meter-fill {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    height: 70px;
+    background: var(--color-primary);
+    transform-origin: bottom;
+    transition: transform 1s ease-out;
+  }
+  
+  .stress-level {
+    font-size: 14px;
+    color: var(--color-muted);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  
+  .stress-level::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-primary);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .pss {
+      padding: 20px 15px;
+    }
+  
+    .pss h1 {
+      font-size: 20px;
+    }
+  
+    .question__text {
+      font-size: 13px;
+    }
+  
+    .option__button {
+      width: 100%;
+    }
+  
+    .score__display {
+      font-size: 16px;
+    }
+  
+    .speedometer {
+      width: 120px;
+      height: 60px;
+    }
+  
+    .meter-fill {
+      height: 55px;
+    }
+  }
